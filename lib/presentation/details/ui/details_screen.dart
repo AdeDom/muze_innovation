@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:muze_innovation/presentation/details/controller/details_controller.dart';
+import 'package:muze_innovation/presentation/details/provider/details_provider.dart';
 import 'package:muze_innovation/presentation/widget/drama_card_widget.dart';
 
 class DetailsScreen extends ConsumerWidget {

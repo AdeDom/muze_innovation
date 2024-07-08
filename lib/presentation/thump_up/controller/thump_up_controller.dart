@@ -1,36 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:muze_innovation/data/data_source/local/app/app_local_data_source.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'thump_up_widget.g.dart';
-
-class ThumpUpWidget extends ConsumerWidget {
-  const ThumpUpWidget({
-    super.key,
-    this.id,
-  });
-
-  final String? id;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return GestureDetector(
-      onTap: () {
-        ref.read(updateThumpUpProvider(id).notifier).update(id);
-      },
-      child: Icon(
-        Icons.thumb_up,
-        color: ref.watch(updateThumpUpProvider(id))
-            ? Theme.of(context).primaryColor
-            : Colors.grey,
-      ),
-    );
-  }
-}
+part 'thump_up_controller.g.dart';
 
 @riverpod
-class UpdateThumpUp extends _$UpdateThumpUp {
+class ThumpUpController extends _$ThumpUpController {
   @override
   bool build(String? id) {
     final appLocalDataSource = ref.watch(appLocalDataSourceProvider);

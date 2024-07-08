@@ -1,5 +1,6 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:muze_innovation/data/data_source/remote/drama/drama_remote_data_source.dart';
+import 'package:muze_innovation/data/data_source/remote/rest_client.dart';
 import 'package:muze_innovation/domain/models/home/home_model.dart';
 import 'package:muze_innovation/utils/extensions/string_extension.dart';
 
@@ -10,22 +11,22 @@ abstract class DramaRepository {
 }
 
 class DramaRepositoryImpl extends DramaRepository {
-  final DramaRemoteDataSource dramaRemoteDataSource;
+  final RestClient restClient;
 
   DramaRepositoryImpl({
-    required this.dramaRemoteDataSource,
+    required this.restClient,
   });
 
   @override
   Future<List<HomeModel>> fetchHome() async {
-    final response = await dramaRemoteDataSource.fetchHome();
+    final response = await restClient.fetchHome();
     if (response.status.isSuccess) {
       final list = response.data?.map((e) {
             return HomeModel(
-              id: e?.id,
-              title: e?.title ?? "Unknown",
-              description: e?.description ?? "Unknown",
-              image: e?.image ??
+              id: e.id,
+              title: e.title ?? "Unknown",
+              description: e.description ?? "Unknown",
+              image: e.image ??
                   "https://www.muze.co.th/wp-content/uploads/2018/06/Logo.png",
             );
           }).toList() ??
@@ -39,15 +40,15 @@ class DramaRepositoryImpl extends DramaRepository {
 
   @override
   Future<HomeModel?> fetchDetails(int id) async {
-    final response = await dramaRemoteDataSource.fetchHome();
+    final response = await restClient.fetchHome();
     if (response.status.isSuccess) {
       return response.data
           ?.map((e) {
             return HomeModel(
-              id: e?.id,
-              title: e?.title ?? "Unknown",
-              description: e?.description ?? "Unknown",
-              image: e?.image ??
+              id: e.id,
+              title: e.title ?? "Unknown",
+              description: e.description ?? "Unknown",
+              image: e.image ??
                   "https://www.muze.co.th/wp-content/uploads/2018/06/Logo.png",
             );
           })
@@ -62,6 +63,8 @@ class DramaRepositoryImpl extends DramaRepository {
 
 final dramaRepositoryProvider = Provider<DramaRepository>((ref) {
   return DramaRepositoryImpl(
-    dramaRemoteDataSource: ref.watch(dramaRemoteDataSourceProvider),
+    restClient: RestClient(
+      Dio(),
+    ),
   );
 });

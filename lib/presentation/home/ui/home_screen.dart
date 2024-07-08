@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:muze_innovation/presentation/home/controller/home_controller.dart';
+import 'package:muze_innovation/presentation/home/provider/home_provider.dart';
 import 'package:muze_innovation/presentation/widget/drama_card_widget.dart';
 
 class HomeScreen extends ConsumerWidget {

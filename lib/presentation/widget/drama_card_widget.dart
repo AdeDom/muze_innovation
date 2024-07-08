@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muze_innovation/domain/models/home/home_model.dart';
-import 'package:muze_innovation/presentation/widget/thump_up_widget.dart';
+import 'package:muze_innovation/presentation/thump_up/ui/thump_up_widget.dart';
 
 class DramaCardWidget extends StatelessWidget {
   const DramaCardWidget({

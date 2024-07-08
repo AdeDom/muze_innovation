@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'details_controller.dart';
+part of 'thump_up_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$fetchDetailsHash() => r'd7fc5da8accb87b13b4d348f0fb0e08362d0ab9b';
+String _$thumpUpControllerHash() => r'947e6056a1be915f181fa40dbc75d2cb312eb959';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -29,30 +29,38 @@ class _SystemHash {
   }
 }
 
-/// See also [fetchDetails].
-@ProviderFor(fetchDetails)
-const fetchDetailsProvider = FetchDetailsFamily();
+abstract class _$ThumpUpController extends BuildlessAutoDisposeNotifier<bool> {
+  late final String? id;
 
-/// See also [fetchDetails].
-class FetchDetailsFamily extends Family<AsyncValue<HomeModel?>> {
-  /// See also [fetchDetails].
-  const FetchDetailsFamily();
-
-  /// See also [fetchDetails].
-  FetchDetailsProvider call({
+  bool build(
     String? id,
-  }) {
-    return FetchDetailsProvider(
-      id: id,
+  );
+}
+
+/// See also [ThumpUpController].
+@ProviderFor(ThumpUpController)
+const thumpUpControllerProvider = ThumpUpControllerFamily();
+
+/// See also [ThumpUpController].
+class ThumpUpControllerFamily extends Family<bool> {
+  /// See also [ThumpUpController].
+  const ThumpUpControllerFamily();
+
+  /// See also [ThumpUpController].
+  ThumpUpControllerProvider call(
+    String? id,
+  ) {
+    return ThumpUpControllerProvider(
+      id,
     );
   }
 
   @override
-  FetchDetailsProvider getProviderOverride(
-    covariant FetchDetailsProvider provider,
+  ThumpUpControllerProvider getProviderOverride(
+    covariant ThumpUpControllerProvider provider,
   ) {
     return call(
-      id: provider.id,
+      provider.id,
     );
   }
 
@@ -68,32 +76,30 @@ class FetchDetailsFamily extends Family<AsyncValue<HomeModel?>> {
       _allTransitiveDependencies;
 
   @override
-  String? get name => r'fetchDetailsProvider';
+  String? get name => r'thumpUpControllerProvider';
 }
 
-/// See also [fetchDetails].
-class FetchDetailsProvider extends AutoDisposeFutureProvider<HomeModel?> {
-  /// See also [fetchDetails].
-  FetchDetailsProvider({
+/// See also [ThumpUpController].
+class ThumpUpControllerProvider
+    extends AutoDisposeNotifierProviderImpl<ThumpUpController, bool> {
+  /// See also [ThumpUpController].
+  ThumpUpControllerProvider(
     String? id,
-  }) : this._internal(
-          (ref) => fetchDetails(
-            ref as FetchDetailsRef,
-            id: id,
-          ),
-          from: fetchDetailsProvider,
-          name: r'fetchDetailsProvider',
+  ) : this._internal(
+          () => ThumpUpController()..id = id,
+          from: thumpUpControllerProvider,
+          name: r'thumpUpControllerProvider',
           debugGetCreateSourceHash:
               const bool.fromEnvironment('dart.vm.product')
                   ? null
-                  : _$fetchDetailsHash,
-          dependencies: FetchDetailsFamily._dependencies,
+                  : _$thumpUpControllerHash,
+          dependencies: ThumpUpControllerFamily._dependencies,
           allTransitiveDependencies:
-              FetchDetailsFamily._allTransitiveDependencies,
+              ThumpUpControllerFamily._allTransitiveDependencies,
           id: id,
         );
 
-  FetchDetailsProvider._internal(
+  ThumpUpControllerProvider._internal(
     super._createNotifier, {
     required super.name,
     required super.dependencies,
@@ -106,13 +112,20 @@ class FetchDetailsProvider extends AutoDisposeFutureProvider<HomeModel?> {
   final String? id;
 
   @override
-  Override overrideWith(
-    FutureOr<HomeModel?> Function(FetchDetailsRef provider) create,
+  bool runNotifierBuild(
+    covariant ThumpUpController notifier,
   ) {
+    return notifier.build(
+      id,
+    );
+  }
+
+  @override
+  Override overrideWith(ThumpUpController Function() create) {
     return ProviderOverride(
       origin: this,
-      override: FetchDetailsProvider._internal(
-        (ref) => create(ref as FetchDetailsRef),
+      override: ThumpUpControllerProvider._internal(
+        () => create()..id = id,
         from: from,
         name: null,
         dependencies: null,
@@ -124,13 +137,13 @@ class FetchDetailsProvider extends AutoDisposeFutureProvider<HomeModel?> {
   }
 
   @override
-  AutoDisposeFutureProviderElement<HomeModel?> createElement() {
-    return _FetchDetailsProviderElement(this);
+  AutoDisposeNotifierProviderElement<ThumpUpController, bool> createElement() {
+    return _ThumpUpControllerProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is FetchDetailsProvider && other.id == id;
+    return other is ThumpUpControllerProvider && other.id == id;
   }
 
   @override
@@ -142,17 +155,18 @@ class FetchDetailsProvider extends AutoDisposeFutureProvider<HomeModel?> {
   }
 }
 
-mixin FetchDetailsRef on AutoDisposeFutureProviderRef<HomeModel?> {
+mixin ThumpUpControllerRef on AutoDisposeNotifierProviderRef<bool> {
   /// The parameter `id` of this provider.
   String? get id;
 }
 
-class _FetchDetailsProviderElement
-    extends AutoDisposeFutureProviderElement<HomeModel?> with FetchDetailsRef {
-  _FetchDetailsProviderElement(super.provider);
+class _ThumpUpControllerProviderElement
+    extends AutoDisposeNotifierProviderElement<ThumpUpController, bool>
+    with ThumpUpControllerRef {
+  _ThumpUpControllerProviderElement(super.provider);
 
   @override
-  String? get id => (origin as FetchDetailsProvider).id;
+  String? get id => (origin as ThumpUpControllerProvider).id;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
