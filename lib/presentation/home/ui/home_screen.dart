@@ -15,7 +15,7 @@ class HomeScreen extends ConsumerWidget {
         title: const Text("Muze"),
         actions: [
           IconButton(
-            onPressed: () => context.go('/profile'),
+            onPressed: () => context.go('/sdui/profile_sdui.json'),
             icon: const Icon(Icons.account_circle),
           ),
         ],

@@ -7,6 +7,7 @@ import 'package:muze_innovation/presentation/details/ui/details_screen.dart';
 import 'package:muze_innovation/presentation/home/ui/home_screen.dart';
 import 'package:muze_innovation/presentation/loading/ui/loading_screen.dart';
 import 'package:muze_innovation/presentation/profile/ui/profile_screen.dart';
+import 'package:muze_innovation/presentation/sdui/ui/sdui_screen.dart';
 import 'package:muze_innovation/presentation/splash/ui/splash_screen.dart';
 import 'package:muze_innovation/utils/observers/app_observer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -54,6 +55,12 @@ class MuzeInnovation extends StatelessWidget {
             path: 'details/:id',
             builder: (context, state) => DetailsScreen(
               id: state.pathParameters['id'],
+            ),
+          ),
+          GoRoute(
+            path: 'sdui/:assetJson',
+            builder: (context, state) => SduiScreen(
+              assetsJson: state.pathParameters['assetJson'],
             ),
           ),
         ],
