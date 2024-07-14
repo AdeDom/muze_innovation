@@ -84,6 +84,12 @@ class SduiWidget extends StatelessWidget {
           child: SduiWidget(sdui: sizedBox.child ?? const SduiData.unknown()),
         );
       },
+      elevatedButton: (elevatedButton) {
+        return ElevatedButton(
+          onPressed: () {},
+          child: SduiWidget(sdui: elevatedButton.child),
+        );
+      },
       text: (text) {
         return Text(text.data);
       },

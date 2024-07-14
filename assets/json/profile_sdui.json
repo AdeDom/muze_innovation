@@ -9,35 +9,52 @@
     }
   },
   "body": {
-    "type": "Container",
-    "color": "amber",
-    "child": {
-      "type": "Padding",
-      "padding": {
-        "type": "EdgeInsets.all",
-        "value": 16
-      },
-      "child": {
-        "type": "Column",
-        "children": [
-          {
-            "type": "Text",
-            "data": "Hello"
-          },
-          {
-            "type": "ClipOval",
-            "child": {
-              "type": "SizedBox",
-              "width": 150,
-              "height": 150,
+    "type": "Row",
+    "mainAxisAlignment": "center",
+    "children": [
+      {
+        "type": "Padding",
+        "padding": {
+          "type": "EdgeInsets.only",
+          "top": 16
+        },
+        "child": {
+          "type": "Column",
+          "children": [
+            {
+              "type": "ClipOval",
               "child": {
-                "type": "Image.network",
-                "src": "https://picsum.photos/300/300"
+                "type": "SizedBox",
+                "width": 150,
+                "height": 150,
+                "child": {
+                  "type": "Image.network",
+                  "src": "https://picsum.photos/300/300"
+                }
+              }
+            },
+            {
+              "type": "SizedBox",
+              "height": 8
+            },
+            {
+              "type": "Text",
+              "data": "AdeDom"
+            },
+            {
+              "type": "SizedBox",
+              "height": 8
+            },
+            {
+              "type": "ElevatedButton",
+              "child": {
+                "type": "Text",
+                "data": "Logout"
               }
             }
-          }
-        ]
+          ]
+        }
       }
-    }
+    ]
   }
 }
