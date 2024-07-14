@@ -9,7 +9,20 @@
     }
   },
   "body": {
-    "type": "Text",
-    "data": "Hello"
+    "type": "Row",
+    "children": [
+      {
+        "type": "Text",
+        "data": "Hello"
+      },
+      {
+        "type": "Text",
+        "data": " "
+      },
+      {
+        "type": "Text",
+        "data": "World"
+      }
+    ]
   }
 }

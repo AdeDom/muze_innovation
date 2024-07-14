@@ -27,6 +27,17 @@ class SduiWidget extends StatelessWidget {
           children: column.children.map((e) => SduiWidget(sdui: e)).toList(),
         );
       },
+      row: (row) {
+        return Row(
+          mainAxisAlignment: row.mainAxisAlignment,
+          mainAxisSize: row.mainAxisSize,
+          crossAxisAlignment: row.crossAxisAlignment,
+          textDirection: row.textDirection,
+          verticalDirection: row.verticalDirection,
+          textBaseline: row.textBaseline,
+          children: row.children.map((e) => SduiWidget(sdui: e)).toList(),
+        );
+      },
       text: (text) {
         return Text(text.data);
       },
