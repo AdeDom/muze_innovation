@@ -44,6 +44,15 @@ class SduiWidget extends StatelessWidget {
           children: row.children.map((e) => SduiWidget(sdui: e)).toList(),
         );
       },
+      stack: (stack) {
+        return Stack(
+          alignment: stack.alignment.fromValue(),
+          textDirection: stack.textDirection,
+          fit: stack.fit,
+          clipBehavior: stack.clipBehavior,
+          children: stack.children.map((e) => SduiWidget(sdui: e)).toList(),
+        );
+      },
       text: (text) {
         return Text(text.data);
       },

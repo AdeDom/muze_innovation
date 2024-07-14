@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:muze_innovation/data/models/sdui/alignment_directional.sdui.dart';
 import 'package:muze_innovation/data/models/sdui/preferred_size_widget_sdui.dart';
 
 part 'sdui_data.freezed.dart';
@@ -31,6 +32,17 @@ sealed class SduiData with _$SduiData {
     TextBaseline? textBaseline,
     required List<SduiData> children,
   }) = _Row;
+
+  const factory SduiData.stack({
+    @Default(AlignmentDirectionalSdui.topStart)
+        AlignmentDirectionalSdui alignment,
+    TextDirection? textDirection,
+    @Default(StackFit.loose)
+        StackFit fit,
+    @Default(Clip.hardEdge)
+        Clip clipBehavior,
+    required List<SduiData> children,
+  }) = _Stack;
 
   const factory SduiData.text({
     required String data,
