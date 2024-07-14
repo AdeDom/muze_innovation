@@ -9,20 +9,10 @@
     }
   },
   "body": {
-    "type": "Stack",
-    "children": [
-      {
-        "type": "Text",
-        "data": "Hello"
-      },
-      {
-        "type": "Text",
-        "data": " "
-      },
-      {
-        "type": "Text",
-        "data": "World"
-      }
-    ]
+    "type": "Center",
+    "child": {
+      "type": "Text",
+      "data": "Hello"
+    }
   }
 }

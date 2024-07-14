@@ -37,12 +37,16 @@ sealed class SduiData with _$SduiData {
     @Default(AlignmentDirectionalSdui.topStart)
         AlignmentDirectionalSdui alignment,
     TextDirection? textDirection,
-    @Default(StackFit.loose)
-        StackFit fit,
-    @Default(Clip.hardEdge)
-        Clip clipBehavior,
+    @Default(StackFit.loose) StackFit fit,
+    @Default(Clip.hardEdge) Clip clipBehavior,
     required List<SduiData> children,
   }) = _Stack;
+
+  const factory SduiData.center({
+    double? widthFactor,
+    double? heightFactor,
+    required SduiData child,
+  }) = _Center;
 
   const factory SduiData.text({
     required String data,

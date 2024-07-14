@@ -53,6 +53,13 @@ class SduiWidget extends StatelessWidget {
           children: stack.children.map((e) => SduiWidget(sdui: e)).toList(),
         );
       },
+      center: (center) {
+        return Center(
+          widthFactor: center.widthFactor,
+          heightFactor: center.heightFactor,
+          child: SduiWidget(sdui: center.child),
+        );
+      },
       text: (text) {
         return Text(text.data);
       },
