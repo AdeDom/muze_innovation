@@ -11,8 +11,6 @@
   "body": {
     "type": "Container",
     "color": "amber",
-    "width": 100,
-    "height": 200,
     "child": {
       "type": "Padding",
       "padding": {
@@ -20,8 +18,21 @@
         "value": 16
       },
       "child": {
-        "type": "Text",
-        "data": "Hello"
+        "type": "Row",
+        "children": [
+          {
+            "type": "Text",
+            "data": "Hello"
+          },
+          {
+            "type": "SizedBox",
+            "width": 100
+          },
+          {
+            "type": "Text",
+            "data": "World"
+          }
+        ]
       }
     }
   }

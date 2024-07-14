@@ -77,6 +77,13 @@ class SduiWidget extends StatelessWidget {
           child: SduiWidget(sdui: padding.child),
         );
       },
+      sizedBox: (sizedBox) {
+        return SizedBox(
+          width: sizedBox.width,
+          height: sizedBox.height,
+          child: SduiWidget(sdui: sizedBox.child ?? const SduiData.unknown()),
+        );
+      },
       text: (text) {
         return Text(text.data);
       },

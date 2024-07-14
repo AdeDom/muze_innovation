@@ -64,6 +64,12 @@ sealed class SduiData with _$SduiData {
     required SduiData child,
   }) = _Padding;
 
+  const factory SduiData.sizedBox({
+    double? width,
+    double? height,
+    SduiData? child,
+  }) = _SizedBox;
+
   const factory SduiData.text({
     required String data,
   }) = _Text;
