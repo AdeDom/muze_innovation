@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:muze_innovation/data/models/sdui/edge_insets_sdui.dart';
 import 'package:muze_innovation/data/models/sdui/sdui_data.dart';
 
 class SduiWidget extends StatelessWidget {
@@ -62,11 +63,18 @@ class SduiWidget extends StatelessWidget {
       },
       container: (container) {
         return Container(
+          padding: container.padding?.fromPadding(),
           color: container.color?.fromValue(),
           width: container.width,
           height: container.height,
           clipBehavior: container.clipBehavior,
           child: SduiWidget(sdui: container.child),
+        );
+      },
+      padding: (padding) {
+        return Padding(
+          padding: padding.padding.fromPadding(),
+          child: SduiWidget(sdui: padding.child),
         );
       },
       text: (text) {
