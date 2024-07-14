@@ -84,6 +84,11 @@ sealed class SduiData with _$SduiData {
     required String src,
   }) = _ImageNetwork;
 
+  const factory SduiData.clipOval({
+    @Default(Clip.antiAlias) Clip clipBehavior,
+    required SduiData child,
+  }) = _ClipOval;
+
   const factory SduiData.unknown() = _Unknown;
 
   factory SduiData.fromJson(Map<String, dynamic> json) =>

@@ -93,6 +93,12 @@ class SduiWidget extends StatelessWidget {
       imageNetwork: (imageNetwork) {
         return Image.network(imageNetwork.src);
       },
+      clipOval: (clipOval) {
+        return ClipOval(
+          clipBehavior: clipOval.clipBehavior,
+          child: SduiWidget(sdui: clipOval.child),
+        );
+      },
       unknown: (_) {
         return Container();
       },
