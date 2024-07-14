@@ -13,6 +13,12 @@ sealed class SduiData with _$SduiData {
   }) = _Scaffold;
 
   const factory SduiData.column({
+    @Default(MainAxisAlignment.start) MainAxisAlignment mainAxisAlignment,
+    @Default(MainAxisSize.max) MainAxisSize mainAxisSize,
+    @Default(CrossAxisAlignment.center) CrossAxisAlignment crossAxisAlignment,
+    TextDirection? textDirection,
+    @Default(VerticalDirection.down) VerticalDirection verticalDirection,
+    TextBaseline? textBaseline,
     required List<SduiData> children,
   }) = _Column;
 

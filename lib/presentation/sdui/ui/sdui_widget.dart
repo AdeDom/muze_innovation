@@ -24,6 +24,12 @@ class SduiWidget extends StatelessWidget {
       },
       column: (column) {
         return Column(
+          mainAxisAlignment: column.mainAxisAlignment,
+          mainAxisSize: column.mainAxisSize,
+          crossAxisAlignment: column.crossAxisAlignment,
+          textDirection: column.textDirection,
+          verticalDirection: column.verticalDirection,
+          textBaseline: column.textBaseline,
           children: column.children.map((e) => SduiWidget(sdui: e)).toList(),
         );
       },
