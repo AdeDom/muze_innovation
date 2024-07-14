@@ -60,6 +60,15 @@ class SduiWidget extends StatelessWidget {
           child: SduiWidget(sdui: center.child),
         );
       },
+      container: (container) {
+        return Container(
+          color: container.color?.fromValue(),
+          width: container.width,
+          height: container.height,
+          clipBehavior: container.clipBehavior,
+          child: SduiWidget(sdui: container.child),
+        );
+      },
       text: (text) {
         return Text(text.data);
       },

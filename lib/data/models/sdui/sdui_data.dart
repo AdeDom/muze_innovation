@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:muze_innovation/data/models/sdui/alignment_directional.sdui.dart';
+import 'package:muze_innovation/data/models/sdui/colors_sdui.dart';
 import 'package:muze_innovation/data/models/sdui/preferred_size_widget_sdui.dart';
 
 part 'sdui_data.freezed.dart';
@@ -47,6 +48,14 @@ sealed class SduiData with _$SduiData {
     double? heightFactor,
     required SduiData child,
   }) = _Center;
+
+  const factory SduiData.container({
+    ColorsSdui? color,
+    double? width,
+    double? height,
+    required SduiData child,
+    @Default(Clip.none) Clip clipBehavior,
+  }) = _Container;
 
   const factory SduiData.text({
     required String data,

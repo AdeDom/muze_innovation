@@ -9,7 +9,10 @@
     }
   },
   "body": {
-    "type": "Center",
+    "type": "Container",
+    "color": "amber",
+    "width": 100,
+    "height": 200,
     "child": {
       "type": "Text",
       "data": "Hello"
