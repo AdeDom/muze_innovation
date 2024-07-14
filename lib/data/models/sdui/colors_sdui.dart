@@ -52,9 +52,39 @@ enum ColorsSdui {
   deepOrangeAccent,
   brown,
   grey,
-  blueGrey;
+  blueGrey,
+  primary,
+  onPrimary,
+  primaryContainer,
+  onPrimaryContainer,
+  secondary,
+  onSecondary,
+  secondaryContainer,
+  onSecondaryContainer,
+  tertiary,
+  onTertiary,
+  tertiaryContainer,
+  onTertiaryContainer,
+  error,
+  onError,
+  errorContainer,
+  onErrorContainer,
+  background,
+  onBackground,
+  surface,
+  onSurface,
+  surfaceVariant,
+  onSurfaceVariant,
+  outline,
+  outlineVariant,
+  shadow,
+  scrim,
+  inverseSurface,
+  onInverseSurface,
+  inversePrimary,
+  surfaceTint;
 
-  Color fromValue() {
+  Color fromValue(BuildContext context) {
     switch (this) {
       case ColorsSdui.transparent:
         return Colors.transparent;
@@ -160,6 +190,66 @@ enum ColorsSdui {
         return Colors.grey;
       case ColorsSdui.blueGrey:
         return Colors.blueGrey;
+      case ColorsSdui.primary:
+        return Theme.of(context).colorScheme.primary;
+      case ColorsSdui.onPrimary:
+        return Theme.of(context).colorScheme.onPrimary;
+      case ColorsSdui.primaryContainer:
+        return Theme.of(context).colorScheme.primaryContainer;
+      case ColorsSdui.onPrimaryContainer:
+        return Theme.of(context).colorScheme.onPrimaryContainer;
+      case ColorsSdui.secondary:
+        return Theme.of(context).colorScheme.secondary;
+      case ColorsSdui.onSecondary:
+        return Theme.of(context).colorScheme.onSecondary;
+      case ColorsSdui.secondaryContainer:
+        return Theme.of(context).colorScheme.secondaryContainer;
+      case ColorsSdui.onSecondaryContainer:
+        return Theme.of(context).colorScheme.onSecondaryContainer;
+      case ColorsSdui.tertiary:
+        return Theme.of(context).colorScheme.tertiary;
+      case ColorsSdui.onTertiary:
+        return Theme.of(context).colorScheme.onTertiary;
+      case ColorsSdui.tertiaryContainer:
+        return Theme.of(context).colorScheme.tertiaryContainer;
+      case ColorsSdui.onTertiaryContainer:
+        return Theme.of(context).colorScheme.onTertiaryContainer;
+      case ColorsSdui.error:
+        return Theme.of(context).colorScheme.error;
+      case ColorsSdui.onError:
+        return Theme.of(context).colorScheme.onError;
+      case ColorsSdui.errorContainer:
+        return Theme.of(context).colorScheme.errorContainer;
+      case ColorsSdui.onErrorContainer:
+        return Theme.of(context).colorScheme.onErrorContainer;
+      case ColorsSdui.background:
+        return Theme.of(context).colorScheme.background;
+      case ColorsSdui.onBackground:
+        return Theme.of(context).colorScheme.onBackground;
+      case ColorsSdui.surface:
+        return Theme.of(context).colorScheme.surface;
+      case ColorsSdui.onSurface:
+        return Theme.of(context).colorScheme.onSurface;
+      case ColorsSdui.surfaceVariant:
+        return Theme.of(context).colorScheme.surfaceVariant;
+      case ColorsSdui.onSurfaceVariant:
+        return Theme.of(context).colorScheme.onSurfaceVariant;
+      case ColorsSdui.outline:
+        return Theme.of(context).colorScheme.outline;
+      case ColorsSdui.outlineVariant:
+        return Theme.of(context).colorScheme.outlineVariant;
+      case ColorsSdui.shadow:
+        return Theme.of(context).colorScheme.shadow;
+      case ColorsSdui.scrim:
+        return Theme.of(context).colorScheme.scrim;
+      case ColorsSdui.inverseSurface:
+        return Theme.of(context).colorScheme.inverseSurface;
+      case ColorsSdui.onInverseSurface:
+        return Theme.of(context).colorScheme.onInverseSurface;
+      case ColorsSdui.inversePrimary:
+        return Theme.of(context).colorScheme.inversePrimary;
+      case ColorsSdui.surfaceTint:
+        return Theme.of(context).colorScheme.surfaceTint;
     }
   }
 }

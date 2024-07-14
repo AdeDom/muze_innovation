@@ -2,7 +2,7 @@
   "$schema": "https://run.mocky.io/v3/6358e7c4-640e-4b9f-849c-6e2b3bd8f6a6",
   "type": "Scaffold",
   "appBar": {
-    "backgroundColor": "Theme.of(context).colorScheme.inversePrimary",
+    "backgroundColor": "inversePrimary",
     "title": {
       "type": "Text",
       "data": "Muze"

@@ -64,7 +64,7 @@ class SduiWidget extends StatelessWidget {
       container: (container) {
         return Container(
           padding: container.padding?.fromPadding(),
-          color: container.color?.fromValue(),
+          color: container.color?.fromValue(context),
           width: container.width,
           height: container.height,
           clipBehavior: container.clipBehavior,
