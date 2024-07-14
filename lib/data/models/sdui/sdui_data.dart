@@ -79,6 +79,11 @@ sealed class SduiData with _$SduiData {
     required String name,
   }) = _ImageAsset;
 
+  @FreezedUnionValue('Image.network')
+  const factory SduiData.imageNetwork({
+    required String src,
+  }) = _ImageNetwork;
+
   const factory SduiData.unknown() = _Unknown;
 
   factory SduiData.fromJson(Map<String, dynamic> json) =>

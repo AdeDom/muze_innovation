@@ -18,19 +18,15 @@
         "value": 16
       },
       "child": {
-        "type": "Row",
+        "type": "Column",
         "children": [
           {
             "type": "Text",
             "data": "Hello"
           },
           {
-            "type": "SizedBox",
-            "width": 100
-          },
-          {
-            "type": "Text",
-            "data": "World"
+            "type": "Image.network",
+            "src": "https://picsum.photos/300/300"
           }
         ]
       }

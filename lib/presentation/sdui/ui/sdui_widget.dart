@@ -90,6 +90,9 @@ class SduiWidget extends StatelessWidget {
       imageAsset: (imageAsset) {
         return Image.asset(imageAsset.name);
       },
+      imageNetwork: (imageNetwork) {
+        return Image.network(imageNetwork.src);
+      },
       unknown: (_) {
         return Container();
       },

@@ -28,8 +28,9 @@ class ProfileScreen extends ConsumerWidget {
                       child: SizedBox(
                         width: 150,
                         height: 150,
-                        child:
-                            Image.network(ref.watch(getImageProfileProvider)),
+                        child: Image.network(
+                          ref.watch(getImageProfileProvider),
+                        ),
                       ),
                     ),
                     const SizedBox(height: 8),
